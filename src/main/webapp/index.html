@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prueba front de servicios</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Prueba de uso de servicios</h1>
+        <script type="text/javascript">
+            $.ajax({
+                url : 'wsProductos/getProductos.rest',
+                success : function(data) {
+                    alert("Carga de productos");
+                    alert(data);
+                }
+            });
+            
+            $.ajax({
+                method: "POST",
+                url : 'wsContactos/addContacto.rest',
+                data: {nombre: "Nombre completo de la persona", email: "email@test.com", comentario: "Estos son mis comentarios de prueba"},
+                success : function(data) {
+                    if(data == true){
+                        alert("contacto almacenado con exito");
+                    }
+                }
+            });
+            
+        </script>
+        
+    </body>
+</html>
