@@ -1,6 +1,6 @@
 {
-    "db_hostPath": "//localhost:5432/artesanias",
-    "db_user": "postgres",
-    "db_password": "1234",
+    "db_hostPath": "//artesanias.czrwqqxfkwry.us-west-2.rds.amazonaws.com:5432/artesanias",
+    "db_user": "foxnet",
+    "db_password": "artesanias*2016",
     "db_ssl": "false"
 }
